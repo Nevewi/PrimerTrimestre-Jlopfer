@@ -1,0 +1,121 @@
+/* Estilos para el layout */
+
+.container {
+    max-width: 1200px; /*ancho maximo de 1200px*/
+    margin: 0 auto;/*no deja margen arriba y abajo mientras que lo deja en auto para los lados*/
+    padding: 0 20px;/*deja espacio a los lados de 20px*/
+}
+
+header {
+    background-color: #333;/*fondo gris oscuro*/
+    color: #fff;/*Texto blanco*/
+    padding: 20px;/*Deja un relleno de 20px al rededor del encabezado*/
+}
+
+nav ul {
+    list-style-type: none;/*elimina los estilos de lista predeterminados*/
+    margin: 0;/*margen de 0*/
+    padding: 0;/*relleno de 0*/
+    display: flex;/*pone el contenedor como flexible*/
+    flex-direction: row;/*alinea los elementos flexibles en una fila horizontal*/
+}
+
+nav li {
+    margin-right: 20px;/*margen derecho de 20px*/
+}
+
+nav a {
+    color: #fff;/*color de texto blanco*/
+    text-decoration: none;/*elimina la decoracion de texto*/
+}
+
+.hero-image {
+    background-image: url(./Imagenes/HedyLamarr3.jpg);/*la imagen*/
+    background-position: center;/*contra la imagen*/
+    background-size: cover;/*la ajusta al tamaño del contenedor*/
+    text-align: center;/*alinea el texto*/
+    position: relative;/*lo posiciona de manera relativa, su movimiento solo le afecta a la imagen, no a ningun otro elemento*/
+    height: 100vh;/*altura del 100% del viewport*/
+}
+
+.hero-text {
+    text-align: center;/*alinea el texto para que este en el cento*/
+    position: absolute;/*su posicion es absoluta, su cambio puede variar los otros elementos*/
+    top: 50%;/*lo despaza un 50% hacia abajo*/
+    left: 50%;/*hace que se centre horizontalmente en el contenedor*/
+    transform: translate(-50%, -50%);/*desplazar el elemento en un 50% de su propio ancho hacia la izquierda y en un 50% de su propio alto hacia arriba*/
+    color: white;/*pone que el texto sea blanco*/
+    font-size: 4vw;/*el tamaño es un 4% del viewport*/
+}
+
+main {
+    padding: 20px;/*agrega un espacio de 20px alrededor del contenido*/
+}
+
+section {
+    margin: 20px 50px;/*margen de 20px arriba y abajo y 50px a la izquierda y derecha*/
+}
+
+section img {
+    max-width: 100%;/*ejuste del ancho maximo de la imagen*/
+    height: auto;/*mantiene la proporcion de la imagen*/
+}
+
+footer {
+    background-color: #333;/*fondo de color del footer*/
+    color: #fff;/*color de las letras*/
+    padding: 20px;/*espacio interno de 20px*/
+    text-align: center;/*centra el contenido del pie de pagina*/
+}
+
+  /* Estilos responsivos */
+
+@media only screen and (max-width: 768px) {
+    .container {/*para configurar la responsividad en pantallas con maximno 768px*/
+    padding: 0 10px;/*0px en los lados izquierdo y derecho del contenedor en dispositivos móviles*/
+    }
+
+    nav ul {
+    flex-direction: column;/*Cambia la dirección de los elementos de la navegación a una disposición de columna en dispositivos móviles*/
+    }
+
+    nav li {
+    margin-right: 0;/*elimina el margen derecho*/
+    margin-bottom: 10px;/*10px en el margen de abajo*/
+    }
+
+    .hero-text {
+    font-size: 8vw;/*Establece el tamaño del hero-text en 8% del ancho de la ventana en dispositivos móviles*/
+    top: 40%;/*Posiciona el hero-text en el 40% desde la parte superior del contenedor*/
+    }
+
+    .hero-image {
+    background-position: top;/*Establece la posición de fondo superior para la hero-iamge*/
+    height: 60vh;/*Establece la altura de la hero-image en el 60% de la altura de la ventana*/
+    }
+
+    section img {
+      max-width: 100%; /* Ajustar el ancho máximo de la imagen en dispositivos móviles */
+      height: auto; /* Mantener la proporción de la imagen */
+    }
+
+    .responsive-image {
+        max-width: 100%; /* Ajustar el ancho máximo del video en dispositivos móviles */
+        height: auto; /* Mantener la proporción del video */
+    }
+
+    #4 {
+        width: 100%;/*Establece el ancho del elemento con el ID "4" al 100%*/
+        height: auto;/*Mantiene la proporción del elemento con el ID "4"*/
+        max-height: 500px; /*Ajustar la altura máxima del video para dispositivos móviles*/
+    }
+    
+    #4 iframe {
+        position: absolute;/*Establece la posición absoluta del iframe dentro del elemento con el ID "4"*/
+        width: 100%;/*Establece el ancho del iframe al 100%*/
+        height: 100%;/*Establece la altura del iframe al 100%*/
+        top: 0;/*Posiciona el iframe en la parte superior del elemento con el ID "4"*/
+        left: 0;/*Posiciona el iframe en la parte izquierda del elemento con el ID "4"*/
+    }
+    
+}
